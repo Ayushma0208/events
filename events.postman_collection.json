@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "dd654faf-6bf0-4627-ac6c-835d73dc1846",
+		"name": "events",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31873881"
+	},
+	"item": [
+		{
+			"name": "ingest event",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "123456-event-secret-key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// [\r\n//   {\r\n//     \"userId\": \"user1\",\r\n//     \"eventName\": \"signup\",\r\n//     \"timestamp\": \"2025-08-04T10:00:00Z\",\r\n//     \"orgId\": \"org123\",\r\n//     \"projectId\": \"projA\"\r\n//   },\r\n//   {\r\n//     \"userId\": \"user1\",\r\n//     \"eventName\": \"visit_home\",\r\n//     \"timestamp\": \"2025-08-04T10:01:00Z\",\r\n//     \"orgId\": \"org123\",\r\n//     \"projectId\": \"projA\"\r\n//   },\r\n//   {\r\n//     \"userId\": \"user2\",\r\n//     \"eventName\": \"signup\",\r\n//     \"timestamp\": \"2025-08-04T10:02:00Z\",\r\n//     \"orgId\": \"org123\",\r\n//     \"projectId\": \"projA\"\r\n//   }\r\n// ]\r\n// [\r\n//   {\r\n//     \"userId\": \"user4\",\r\n//     \"eventName\": \"signup\",\r\n//     \"timestamp\": \"2025-08-04T10:00:00Z\",\r\n//     \"orgId\": \"org123\",\r\n//     \"projectId\": \"projA\"\r\n//   }\r\n// ]\r\n// bulk data for testing \r\n[\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"eventName\": \"signup\",\r\n        \"timestamp\": \"2025-08-01T09:00:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"eventName\": \"view_product\",\r\n        \"timestamp\": \"2025-08-01T09:05:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"eventName\": \"add_to_cart\",\r\n        \"timestamp\": \"2025-08-01T09:07:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"eventName\": \"purchase\",\r\n        \"timestamp\": \"2025-08-01T09:10:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"eventName\": \"logout\",\r\n        \"timestamp\": \"2025-08-01T09:15:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"eventName\": \"login\",\r\n        \"timestamp\": \"2025-08-02T08:00:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"eventName\": \"view_product\",\r\n        \"timestamp\": \"2025-08-02T08:05:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"eventName\": \"click_ad\",\r\n        \"timestamp\": \"2025-08-02T08:10:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"eventName\": \"signup_newsletter\",\r\n        \"timestamp\": \"2025-08-03T10:00:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"eventName\": \"logout\",\r\n        \"timestamp\": \"2025-08-03T10:05:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"eventName\": \"signup\",\r\n        \"timestamp\": \"2025-08-01T11:00:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"eventName\": \"view_product\",\r\n        \"timestamp\": \"2025-08-01T11:10:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"eventName\": \"click_ad\",\r\n        \"timestamp\": \"2025-08-01T11:12:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"eventName\": \"logout\",\r\n        \"timestamp\": \"2025-08-01T11:20:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"eventName\": \"login\",\r\n        \"timestamp\": \"2025-08-02T07:00:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"eventName\": \"view_product\",\r\n        \"timestamp\": \"2025-08-02T07:05:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"eventName\": \"add_to_cart\",\r\n        \"timestamp\": \"2025-08-02T07:10:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"eventName\": \"purchase\",\r\n        \"timestamp\": \"2025-08-02T07:15:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"eventName\": \"signup_newsletter\",\r\n        \"timestamp\": \"2025-08-03T12:00:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"eventName\": \"logout\",\r\n        \"timestamp\": \"2025-08-03T12:10:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"eventName\": \"signup\",\r\n        \"timestamp\": \"2025-08-01T12:00:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"eventName\": \"view_product\",\r\n        \"timestamp\": \"2025-08-01T12:05:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"eventName\": \"click_ad\",\r\n        \"timestamp\": \"2025-08-01T12:10:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"eventName\": \"add_to_cart\",\r\n        \"timestamp\": \"2025-08-01T12:15:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"eventName\": \"purchase\",\r\n        \"timestamp\": \"2025-08-02T09:00:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"eventName\": \"logout\",\r\n        \"timestamp\": \"2025-08-02T09:15:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"eventName\": \"login\",\r\n        \"timestamp\": \"2025-08-03T10:00:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"eventName\": \"view_product\",\r\n        \"timestamp\": \"2025-08-03T10:05:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"eventName\": \"signup_newsletter\",\r\n        \"timestamp\": \"2025-08-04T10:00:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"eventName\": \"logout\",\r\n        \"timestamp\": \"2025-08-04T10:10:00Z\",\r\n        \"orgId\": \"org123\",\r\n        \"projectId\": \"projA\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseURL}}/api/events"
+			},
+			"response": []
+		},
+		{
+			"name": "funnel computation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "123456-event-secret-key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"steps\": [\"signup\", \"view_product\", \"purchase\"],\r\n  \"startDate\": \"2025-08-01\",\r\n  \"endDate\": \"2025-08-04\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseURL}}/api/funnels"
+			},
+			"response": []
+		},
+		{
+			"name": "user journey",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "123456-event-secret-key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/users/user5/journey"
+			},
+			"response": []
+		},
+		{
+			"name": "retention",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "123456-event-secret-key",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/retention?cohort=signup&days=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"retention"
+					],
+					"query": [
+						{
+							"key": "cohort",
+							"value": "signup"
+						},
+						{
+							"key": "days",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event metrics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "123456-event-secret-key",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/metrics?event=signup&from=2025-08-01&to=2025-08-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"metrics"
+					],
+					"query": [
+						{
+							"key": "event",
+							"value": "signup"
+						},
+						{
+							"key": "interval",
+							"value": "daily",
+							"disabled": true
+						},
+						{
+							"key": "from",
+							"value": "2025-08-01"
+						},
+						{
+							"key": "to",
+							"value": "2025-08-05"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:5000",
+			"type": "default"
+		}
+	]
+}
