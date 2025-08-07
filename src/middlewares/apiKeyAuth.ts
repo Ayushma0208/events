@@ -13,7 +13,6 @@ export const apiKeyAuth = async (req: Request, res: Response, next: NextFunction
     return res.status(403).json({ error: 'Invalid API key' });
   }
 
-  // attach to request context
   (req as any).orgId = keyRecord.orgId;
   (req as any).projectId = keyRecord.projectId;
 

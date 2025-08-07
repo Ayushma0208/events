@@ -47,7 +47,6 @@ export const computeFunnel = async (req: Request, res: Response, next: NextFunct
                 if (progress === steps.length) break;
             }
         }
-
         res.json({ funnel: funnelCounts });
     } catch (err) {
         next(err);
